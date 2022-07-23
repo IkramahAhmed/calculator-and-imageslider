@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          #clear{
+            width: 130px;
+        }
+        .formstyle{
+            width: 129px;
+            height: 260px;
+            margin: auto;
+            border: 2px solid black;
+
+        }
+        input{
+            width: 40px;
+            background-color: black;
+            color: white;
+        }
+        #answerstyle{
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="formstyle">
+        <form action="" name="form">
+        <input type="text" name="answer" id="answerstyle"><br></br>
+        <input type="button" name="" value="1" onclick="valueButton(this);">
+        <input type="button" name="" value="2" onclick="valueButton(this);">
+        <input type="button" name="" value="3" onclick="valueButton(this);"><br></br>
+        
+        <input type="button" name="" value="4" onclick="valueButton(this);">
+        <input type="button" name="" value="5" onclick="valueButton(this);">
+        <input type="button" name="" value="6" onclick="valueButton(this);"><br></br>
+        
+        <input type="button" name="" value="7" onclick="valueButton(this);">
+        <input type="button" name="" value="8" onclick="valueButton(this);">
+        <input type="button" name="" value="9" onclick="valueButton(this);"><br></br>
+        
+        <input type="button" name="" value="+" onclick="valueButton(this);">
+        <input type="button" name="" value="-" onclick="valueButton(this);">
+        <input type="button" name="" value="*" onclick="valueButton(this);"><br></br>
+        <input type="button" name="" value="/" onclick="valueButton(this);">
+        <input type="button" name="" value="0" onclick="valueButton(this);">
+        <!-- //input type="button" name="" value="square" onclick="square()"> -->
+        
+        <input type="button" name="" value="=" onclick="calculate()"><br></br>
+        
+        
+           <input type="button" id="clear" value="clear All"  onclick="clearall()"> 
+        
+        
+        </form>
+        </div>
+        <script>
+            function valueButton(e) {//actually iska kam yeh he kay jo bhe button press kar rahay hen uske value show kr raha he screen pr
+                form.answer.value += e.value;
+            }
+            function clearall(){
+                form.answer.value=null;
+            } 
+            function calculate(element){
+                form.answer.value =eval(form.answer.value);
+            }
+            
+        </script> 
+</body>
+</html>
